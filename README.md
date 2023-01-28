@@ -1,17 +1,22 @@
-# Задача
-Требуется сегментировать изображения новообразований на коже из датасета ADDI Project с помощью одного из предложенных методов (Graph-based segmentation, Normalized cuts, Свёрточные нейронные сети). В качестве решения были использованы сверточные нейронные сети. 
+# The Problem
+Segment images of skin neoplasms from ADDI Project dataset using one of 
+of the proposed methods (Graph-based segmentation, Normalized cuts, convolutional neural networks). 
+We used convolutional neural networks as the solution. 
 
-При использовании нейронных сетей выборка разделена на train/test/validation в соотношении 100/50/50.\
-Качество модели оценивается с помощью метрики IoU (Intersection over Union).
+When using neural networks, the sample is divided into a 100/50/50 ratio.
+The quality of the model is evaluated using the IoU (Intersection over Union) metric.
 
-# Результат
-Построены архитектуры SegNet и U-Net с 3 функциями потерь: BCE, Dice, Focal. Суммарно все 6 структур были обучены на 300 эпохах.\
-Результаты метрик, а также графики изменения лосса представлены в блоках SegNet (Summary) и U-Net (Summary):
+# Results
+SegNet and U-Net architectures with 3 loss functions were built: BCE, Dice, Focal. In total all 6 structures were trained on 300 epochs.\
+The results of the metrics, as well as the graphs of change in the loss are presented in the SegNet (Summary) and U-Net (Summary) blocks:
 
 <p align="center">
-  <img src="https://github.com/Donskoy-Andrey/Image-Segmentation/blob/master/segnet.png" />
-  <img src="https://github.com/Donskoy-Andrey/Image-Segmentation/blob/master/unet.png" />
+  <img src="https://github.com/Donskoy-Andrey/Image-Segmentation/blob/master/images/segnet.png" />
+  <img src="https://github.com/Donskoy-Andrey/Image-Segmentation/blob/master/images/unet.png" />
 </p>
 
-# Качество
-Лучшая из полученных моделей – SegNet на Focal Loss, результат метрики – **0.792 на 240 эпохе.**
+# Metric Value
+The best model obtained is SegNet at Focal Loss, the metric result is **0.792 at 240 epoch.**
+
+## Competition Result
+> 79/100 points, 7th place in the top. [Winner's diploma](https://github.com/Donskoy-Andrey/Image-Segmentation/blob/master/images/Диплом.pdf).
